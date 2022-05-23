@@ -1,0 +1,31 @@
+{
+	"name": "@example/starter",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"format": "pnpm prettier -w ."
+	},
+	"browsers": [
+		"defaults",
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	],
+	"devDependencies": {
+		"astro": "1.0.0-beta.31",
+		"autoprefixer": "^10.4.7",
+		"doiuse": "^4.4.1",
+		"eslint": "^8.16.0",
+		"eslint-config-astro": "^1.0.8",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"postcss": "^8.4.14",
+		"postcss-nested": "^5.0.6",
+		"prettier": "^2.6.2",
+		"prettier-plugin-astro": "0.1.0-next.4"
+	}
+}

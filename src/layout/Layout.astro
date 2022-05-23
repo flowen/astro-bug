@@ -1,0 +1,60 @@
+---
+  import '../styles/vars.css';
+  import '../styles/globals.css';
+
+  import Nav from '@/components/Nav.astro';
+  import HeadMeta from '@/components/HeadMeta.astro';
+
+  const { title = "flowen.me" } = Astro.props
+---
+
+<style>
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vmin auto 15vmin;
+  }
+</style>
+
+<html lang="en">
+<head>
+
+	<HeadMeta />
+
+  <title>{title}</title>
+
+</head>
+<body>
+  <Nav />
+	
+  <div class="wrapper">
+
+    <header class="header">
+      <h1>Rou Hun Fan</h1>
+    </header>
+
+    <main data-router-wrapper class="main">
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <h1>
+        <div><span class="font-line-through">Senior tech</span></div>
+        <div><span class="font-line-through">0000</span>‘831229</div>
+      </h1>
+
+      <h1 class="font-alt">
+        Contact &#10143;
+        <a href="https://read.cv/flowen" target="_blank" rel="noopener noreferrer">CV</a> 
+        <a href="https://t.me/flowen" target="_blank" rel="noopener noreferrer">TG</a> 
+        <a href="https://twitter.com/flowen_af"target="_blank" rel="noopener noreferrer">TW</a>
+      </h1>
+    </footer>
+  </div>
+</body>
+
+
+<!-- load any 3rd party library, like analytics that slow down time-to-interactive, with partytown -->
+<!-- <script type="text/partytown" src="https://example.com/analytics.js"></script> -->
+</html>

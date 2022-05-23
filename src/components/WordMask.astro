@@ -1,0 +1,57 @@
+---
+export interface Props {
+  dir: string;
+}
+
+const { dir } = Astro.props as Props
+
+---
+
+<div class="mask">
+  <div class="text" data-direction-mask={dir}>
+    <slot />
+  </div>
+</div>
+
+
+<script>
+
+  const masks = document.querySelectorAll('.mask')
+
+  console.log('mask')
+
+  masks.forEach(mask => {
+
+    console.log(mask.dataset)
+  })
+
+
+
+</script>
+
+<style>
+  .mask {
+    overflow: hidden;
+  }
+
+  .text {
+    transition: var(--d-slow) var(--ease-out);
+
+    &.top {
+      transform: translateY(-100%);
+    }
+    &.bottom {
+      transform: translateY(100%);
+    }
+    &.left {
+      transform: translateX(-100%);
+    }
+    &.right {
+      transform: translateX(100%);
+    }
+
+    &.show {
+      transform: translate(0);
+    }
+  }
+</style>

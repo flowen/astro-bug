@@ -1,0 +1,80 @@
+---
+import Layout from '@/layout/Layout.astro'
+import WordMask from '@/components/WordMask.astro'
+const title = "home"
+---
+
+<Layout title={title}>
+
+	<article data-router-view="home">
+	
+		<h1>
+			<div class="fx">
+				<div>
+					<WordMask dir="top">UI dev</WordMask>
+					<WordMask dir="right">Motion</WordMask>
+				</div>
+				<img src="/src/assets/img/fx.jpg"/>
+			</div>
+			<!-- <div style="background: /src/assets/img/fx.jpg"/> -->
+			<div>
+				<span class="font-alt">&amp;</span>
+				<span>Frontend</span>
+			</div>
+
+			<div class="me">
+				<div class="me-img">
+					<div class="me-overlay" />
+					<img src="/src/assets/img/me.jpg"/>
+				</div>
+
+				<div class="font-alt">
+					<div>Creative</div>
+					<div>Coding</div>
+				</div>
+			</div>
+
+		</h1>
+
+	</article>
+
+</Layout>
+
+<style>
+	.fx {
+		display: flex;
+
+		& img {
+			height: calc(13vmin * 2);
+			margin: 2vmin 0 0 7vmin;
+		}
+
+	}
+
+	.me {
+		display: flex;
+
+		&-img {
+			position: relative;
+			margin: 0 7vmin 0 0;
+		
+			& img {
+				display: block;
+				height: calc(13vmin * 2);
+			}
+
+			& .me-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				background: #E75A5A;
+				mix-blend-mode: lighten;
+			}
+		}
+
+
+	}
+</style>
